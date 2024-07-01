@@ -1,7 +1,6 @@
 {
   "name": "typescript-fso-p9",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npm test",
@@ -28,5 +27,7 @@
   },
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
