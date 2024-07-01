@@ -1,6 +1,6 @@
-type Rating = 1 | 2 | 3
+// type Rating = 1 | 2 | 3;
 
-interface Result {
+export interface Result {
     periodLength: number,
     trainingDays: number,
     success: boolean,
@@ -10,9 +10,9 @@ interface Result {
     ratingExplanation: string,
 }
 
-const calculateExercises = (dailyHours: number[], target: number): Result => {
-    if (dailyHours.length !== 7) throw new Error('Needs to be 7 arguments!')
-    const totalHours: number = dailyHours.reduce((acc, curr) => acc + curr, 0)
+export const calculateExercises = (dailyHours: number[], target: number): Result => {
+    if (dailyHours.length !== 7) throw new Error('Needs to be 7 arguments!');
+    const totalHours: number = dailyHours.reduce((acc, curr) => acc + curr, 0);
     
     return {
         periodLength: 7,
@@ -22,6 +22,6 @@ const calculateExercises = (dailyHours: number[], target: number): Result => {
         rating: 1 || 2 || 3,
         ratingExplanation: "it's completely random lol",
         averageTime: totalHours / 7,
-    }
-}
-console.log(calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 1.5))
+    };
+};
+console.log(calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 1.5));
