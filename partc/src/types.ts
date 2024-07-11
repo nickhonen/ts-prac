@@ -9,8 +9,11 @@ export interface Patient {
     occupation: string;
 }
 
+export type PatientWithoutSsn = Omit<Patient, 'ssn'>;
+
 export interface Diagnosis {
     code: string;
     name: string;
     latin?: string;
 }
+
